@@ -1,0 +1,35 @@
+html{
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
+    color: saddlebrown;
+    text-shadow: 2em;
+}
+body, div, header, h1, nav{
+    border: 0;
+    padding: 0;
+    margin: 0;
+ }
+.navbar{
+    float: left;
+    padding-right: 2.5%;
+    background-color: rgba(212, 125, 44, 0.692);
+}
+ul{
+    padding-top: 5%;
+    list-style-type: none;
+}
+ul li{
+    color: red;
+    padding: 10%;
+    margin-bottom: 3em;
+    border: 1px solid black;
+}
+li a{
+    display: block;
+}
+header{
+    margin-left: 12.5%;
+    border-left: 10px solid red;
+    border-bottom: 1em solid red;
+}
