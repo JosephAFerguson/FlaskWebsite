@@ -1,9 +1,13 @@
 var nav = document.querySelectorAll(".navbar");
+var count = 0;
 for(var i = 0; i < nav.length; i++){
     nav[i].style.visibility = "hidden";
 }
-var count = 0;
-function menubutton(){
+function menu(x){
+    x.classList.toggle('change');
+    visi();
+}
+function visi(){
     if(count === 0){
         for(var i = 0; i < nav.length; i++){
             nav[i].style.visibility = "visible";
@@ -16,9 +20,3 @@ function menubutton(){
         count = count - 1;
     }
 }
-function createEventListeners(){
-    document.getElementById("1").addEventListener("click", menubutton, false);
-    document.getElementById("2").addEventListener("click", menubutton, false);
-    document.getElementById("3").addEventListener("click", menubutton, false);
-}
-window.addEventListener("load", createEventListeners, false);
