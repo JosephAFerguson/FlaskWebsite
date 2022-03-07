@@ -25,16 +25,32 @@ div.bar1, div.bar2, div.bar3{
     margin: 6px 0;
 }
 /* learned from w3 school*/
+@keyframes mymove1{
+    100% {-webkit-transform: rotate(-45deg) translate(-9px, 6px);}
+    100% {transform: rotate(-45deg) translate(-9px, 6px) ;}
+}
+@keyframes mymove3{
+    100% {-webkit-transform: rotate(45deg) translate(-8px, -8px);}
+    100% {transform: rotate(45deg) translate(-8px, -8px) ;}
+}
+@keyframes mymoveback1{
+
+}
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    animation-name: mymove1;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
 }
 .change .bar2 {
     opacity: 0;
 }
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+    animation-name: mymove3;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+.changeback .bar1{
+    color: blue;
 }
 header, nav{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,7 +89,7 @@ ul{
 }
 li a{
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 12.5%;
     border: 2px solid rgb(172, 0, 0);
     display: block;
     text-decoration: none;
@@ -81,4 +97,9 @@ li a{
 }
 li a:visited{
     color: rgb(172, 0, 0);
+}
+li a:hover{
+    border-radius: 2em;
+    font-style: italic;
+    border: 3px solid rgb(172, 0, 0);
 }

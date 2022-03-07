@@ -1,22 +1,22 @@
 var nav = document.querySelectorAll(".navbar");
 var count = 0;
-for(var i = 0; i < nav.length; i++){
-    nav[i].style.visibility = "hidden";
-}
-function menu(x){
-    x.classList.toggle('change');
-    visi();
-}
+$("nav").each(function(i){
+    this.style.opacity = "0";
+});
 function visi(){
-    if(count === 0){
-        for(var i = 0; i < nav.length; i++){
-            nav[i].style.visibility = "visible";
-        }
+    if(count == 0){
+        $("nav").each(function(i){
+            $(this).animate({opacity: "1"}, 'fast');
+        });
+        $("div div").addClass("change");
+        $("div div").removeClass("changeback");
         count = count + 1;
-    } else {
-        for(var i = 0; i < nav.length; i++){
-            nav[i].style.visibility = "hidden";
-        }
+    } else if(count == 1){
+        $("nav").each(function(i){
+            $(this).animate({opacity: "0"}, 'fast');
+        });
+        $("div div").addClass("changeback");
+        $("div div").removeClass("change");
         count = count - 1;
     }
 }
