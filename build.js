@@ -6,14 +6,14 @@ $("nav").each(function(i){
 function visi(){
     if(count == 0){
         $("nav").each(function(i){
-            $(this).slideDown();
+            $(this).slideDown("fast");
         });
         $("div div").addClass("change");
         $("div div").removeClass("changeback");
         count = count + 1;
     } else if(count == 1){
         $("nav").each(function(i){
-            $(this).slideUp();
+            $(this).slideUp("fast");
         });
         $("div div").addClass("changeback");
         $("div div").removeClass("change");

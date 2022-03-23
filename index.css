@@ -1,0 +1,46 @@
+fieldset{/*position*/
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 20%;
+    background-color: rgb(250, 175, 175);
+}
+fieldset{/*appearance*/
+    border: 3px outset rgb(172, 0, 0);
+}
+fieldset form{
+    padding: 5%;
+}
+fieldset input{
+    outline: none;
+    border: 0.5px solid rgb(172, 0, 0);
+}
+fieldset input:hover{
+    border: 2px solid rgb(172, 0, 0);
+}
+fieldset input:focus{
+    border: 2px solid rgb(172, 0, 0);
+}
+fieldset h1{
+    text-align: center;
+    margin-top: 0%;
+    border-bottom: 1px dotted rgb(172, 0, 0);
+    font-weight: bold;
+    font-size: 14pt;
+}
+button{/*positioning*/
+    position: relative;
+    width: 30%;
+    left: 35%;
+    margin-bottom: 5%;
+    padding: 3%;
+}
+button{/*appearance*/
+    border: 2px solid rgb(172, 0, 0);
+    background-color: red;
+    color: white;
+    box-shadow: 5px 5px red;
+}
+button:active{
+    box-shadow: 1px 1px red;
+    transform: translateY(4px) translateX(4px);
+}

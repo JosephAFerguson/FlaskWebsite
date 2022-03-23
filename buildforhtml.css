@@ -4,15 +4,18 @@ html{
     color: rgb(252, 40, 40);
     background-color: rgba(0, 0, 0, 0.85);
 }
-body, div, header, h1, nav, ul, article{
+body, div, header, h1, nav, ul, article, p, fieldset, button{
     border: 0;
     padding: 0;
     margin: 0;
  }
 header{
-    text-align: center;
     border-bottom: 8px solid rgb(172, 0, 0);
     border-right: 8px solid rgb(172, 0, 0);
+}
+header h1{
+    position: fixed;
+    left: calc(100% / 2 - 78.5px);/*width of h1 element*/
 }
 div.menuicon{
     float: left;
@@ -23,50 +26,6 @@ div.bar1, div.bar2, div.bar3{
     height: 5px;
     background-color: rgb(172, 0, 0);
     margin: 6px 0;
-}
-/* learned from w3 school*/
-@keyframes mymove1{
-    100% {-webkit-transform: rotate(-45deg) translate(-9px, 6px);}
-    100% {transform: rotate(-45deg) translate(-9px, 6px) ;}
-}
-@keyframes mymove3{
-    100% {-webkit-transform: rotate(45deg) translate(-8px, -8px);}
-    100% {transform: rotate(45deg) translate(-8px, -8px) ;}
-}
-@keyframes mymoveback1{
-    0% {-webkit-transform: rotate(-45deg) translate(-9px, 6px);}
-    0% {transform: rotate(-45deg) translate(-9px, 6px) ;}
-    100% {-webkit-transform: rotate(0deg) translate(9px, -6px);}
-    100% {transform: rotate(0deg) translate(0px, 0px) ;}
-}
-@keyframes mymoveback3{
-    0% {-webkit-transform: rotate(45deg) translate(-8px, -8px);}
-    0% {transform: rotate(45deg) translate(-8px, -8px) ;}
-    100% {-webkit-transform: rotate(0deg) translate(0px, 0px);}
-    100% {transform: rotate(0deg) translate(0px, 0px) ;}
-}
-.change .bar1 {
-    animation-name: mymove1;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
-}
-.change .bar2 {
-    opacity: 0;
-}
-.change .bar3 {
-    animation-name: mymove3;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
-}
-.changeback .bar1{
-    animation-name: mymoveback1;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
-}
-.changeback .bar3{
-    animation-name: mymoveback3;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
 }
 header, nav{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,4 +77,48 @@ li a:hover{
     border-radius: 2em;
     font-style: italic;
     border: 3px solid rgb(172, 0, 0);
+}
+/* learned from w3 school*/
+@keyframes mymove1{
+    100% {-webkit-transform: rotate(-45deg) translate(-9px, 6px);}
+    100% {transform: rotate(-45deg) translate(-9px, 6px) ;}
+}
+@keyframes mymove3{
+    100% {-webkit-transform: rotate(45deg) translate(-8px, -8px);}
+    100% {transform: rotate(45deg) translate(-8px, -8px) ;}
+}
+@keyframes mymoveback1{
+    0% {-webkit-transform: rotate(-45deg) translate(-9px, 6px);}
+    0% {transform: rotate(-45deg) translate(-9px, 6px) ;}
+    100% {-webkit-transform: rotate(0deg) translate(9px, -6px);}
+    100% {transform: rotate(0deg) translate(0px, 0px) ;}
+}
+@keyframes mymoveback3{
+    0% {-webkit-transform: rotate(45deg) translate(-8px, -8px);}
+    0% {transform: rotate(45deg) translate(-8px, -8px) ;}
+    100% {-webkit-transform: rotate(0deg) translate(0px, 0px);}
+    100% {transform: rotate(0deg) translate(0px, 0px) ;}
+}
+.change .bar1 {
+    animation-name: mymove1;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    animation-name: mymove3;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+.changeback .bar1{
+    animation-name: mymoveback1;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+.changeback .bar3{
+    animation-name: mymoveback3;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
 }
