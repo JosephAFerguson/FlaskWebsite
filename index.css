@@ -9,6 +9,7 @@ fieldset{/*appearance*/
 }
 fieldset form{
     padding: 5%;
+    margin: 1%;
 }
 fieldset input{
     outline: none;
@@ -27,20 +28,21 @@ fieldset h1{
     font-weight: bold;
     font-size: 14pt;
 }
-button{/*positioning*/
+#button{/*positioning*/
     position: relative;
     width: 30%;
     left: 35%;
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
     padding: 3%;
 }
-button{/*appearance*/
+#button{/*appearance*/
     border: 2px solid rgb(172, 0, 0);
     background-color: red;
     color: white;
     box-shadow: 5px 5px red;
 }
-button:active{
+#button:active{
     box-shadow: 1px 1px red;
     transform: translateY(4px) translateX(4px);
 }
