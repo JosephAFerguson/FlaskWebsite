@@ -1,30 +1,35 @@
 function storeInfo(){
-    var name = document.getElementById("name").value
+	const name = $("#name").val();
     localStorage.setItem("name", name);
     document.cookie = "name=" + name;
 }
-function handleSubmit(evt){
-	if(evt.preventDefault){
-		evt.preventDefault(); // prevent form from submitting
-	} else{
-		evt.returnValue = false; //prevent form from submitting in IE8
-	}
+function signIn(){
+	$("#SIGNUP").toggleClass("show");
+}
+function showMessage(name){
+	var fieldset = document.getElementById("SIGNUP");
+	const form = document.getElementById("nameEmail");
+	const h1 = document.querySelector("fieldset h1");
+	fieldset.removeChild(form);
+	fieldset.removeChild(h1);
+	var message = document.createElement("p");
+	const TYname = name.toUpperCase();
+	message.innerText = "THANK YOU FOR SIGNING UP " + TYname + "!!!!";
+	fieldset.appendChild(message);
+}
+function handleSubmit(event){
 	storeInfo();
-    document.getElementsByTagName("form")[0].submit();
+	const TYname = $("#name").val();
+	showMessage(TYname);
+	event.preventDefault();
 }
 function createEventListeners(){
-    var form = document.getElementsByTagName("form")[0];
-    if(form.addEventListener){
-		form.addEventListener("submit", handleSubmit, false);
-	} else if(form.attachEvent){
-		form.attachEvent("onsubmit", handleSubmit);
-	}
+	const form = document.getElementsByTagName("form")[0];
+	const SUbutton = document.querySelector(".SUbutton");
+	$(form).submit(handleSubmit);
+	$(SUbutton).click(function(){signIn();});
 }
 function setUpPage(){
     createEventListeners();
 }
-if(window.addEventListener){
-	window.addEventListener("load", setUpPage, false);
-} else if(window.attachEvent){
-	window.attachEvent("onload", setUpPage);
-}
+$(document).ready(setUpPage);

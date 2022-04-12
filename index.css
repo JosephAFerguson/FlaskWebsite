@@ -1,7 +1,33 @@
+.SUbutton{
+    position: fixed;
+    left: 92%;
+    top: 1%;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.80);
+    color: rgb(252, 40, 40);
+    border: 2px solid rgb(172, 0, 0);
+}
+.SUbutton:active{
+    transform: translateY(4px) translateX(4px);
+}
+.SUbutton:hover{
+    border: 3px solid rgb(172, 0, 0);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 fieldset{/*position*/
-    margin: 0 auto;
+    position: relative;
+    margin: auto auto;
     margin-top: 10%;
+    display: block;
+    left: calc(100% - width / 2);
     width: 20%;
+    height: 15em;
     background-color: rgb(250, 175, 175);
 }
 fieldset{/*appearance*/
@@ -9,10 +35,12 @@ fieldset{/*appearance*/
 }
 fieldset form{
     padding: 5%;
-    margin: 1%;
+    margin: 2%;
 }
 fieldset input{
     outline: none;
+    margin-bottom: 1.5em;
+    margin-top: 1.75em;
     border: 0.5px solid rgb(172, 0, 0);
 }
 fieldset input:hover{
@@ -29,12 +57,9 @@ fieldset h1{
     font-size: 14pt;
 }
 #button{/*positioning*/
-    position: relative;
     width: 30%;
-    left: 35%;
-    margin-bottom: 2.5%;
-    margin-top: 2.5%;
     padding: 3%;
+    margin-left: 30%;
 }
 #button{/*appearance*/
     border: 2px solid rgb(172, 0, 0);

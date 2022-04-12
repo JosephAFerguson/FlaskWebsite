@@ -1,4 +1,4 @@
-var nav = document.querySelectorAll(".navbar");
+const nav = $(".navbar");
 var count = 0;
 $("nav").each(function(i){
     $(this).slideUp(0.1);
@@ -20,3 +20,15 @@ function visi(){
         count = count - 1;
     }
 }
+function cEL(){
+    $(".menuicon").mouseenter(function(){
+        visi();
+    });
+    $(nav).mouseleave(function(){
+        visi();
+    });
+}
+function setUpPage(){
+    cEL();
+}
+$(document).ready(setUpPage);

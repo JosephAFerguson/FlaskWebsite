@@ -10,12 +10,13 @@
 <body>
     <div>
         <header>
-            <div class="menuicon" onclick="visi()">
+            <div class="menuicon">
                 <div class="bar1" id="1"></div>
                 <div class="bar2" id="2"></div>
                 <div class="bar3" id="3"></div>
             </div>
             <h1>WELCOME</h1>
+            <button class="SUbutton">SIGN UP</button>
         </header>
         <nav class="navbar">
             <ul>
@@ -24,14 +25,14 @@
                 <li class="game3"><a href="game3.html">Third Game</a></li>
             </ul>
         </nav>
-        <fieldset>
+        <fieldset class="hide" id="SIGNUP">
             <h1>SIGN UP!</h1>
-            <form class="nameEmail">
+            <form id="nameEmail">
                 <label for="name">Name: </label>
-                <input type="text" id="name" name="name" placeholder="Please Enter Your Name">
+                <input type="text" id="name" name="username" placeholder="Please Enter Your Name">
                 <label for="email">Email: </label>
-                <input type="email" id="email" name="email" placeholder="Please Enter Your Email">
-                <input type="submit" id="button">
+                <input type="email" id="email" name="user_email" placeholder="Please Enter Your Email">
+                <input type="submit" id="button" value="ENTER">
             </form>
         </fieldset>
     </div>

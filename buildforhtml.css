@@ -33,7 +33,7 @@ header, nav{
 }
 nav{
     position: fixed;
-    top: 50px;
+    top: 7%;
     left: 0;
 }
 header{
@@ -50,6 +50,7 @@ article{
 }
 .navbar{
     float: left;
+    border-top: 8px rgb(172, 0, 0);
     border-right: 8px rgb(172, 0, 0);
     border-bottom: 8px rgb(172, 0, 0);
     border-left: 1px rgb(172, 0, 0);
