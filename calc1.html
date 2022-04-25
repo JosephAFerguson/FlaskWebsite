@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id="title">{% block title %}Joe's Calculators{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buildforhtml.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='game1style.css')}}">
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <header>
+            <div class="nav-menu-container">
+                <div class="menuicon">
+                    <div class="bar1" id="1"></div>
+                    <div class="bar2" id="2"></div>
+                    <div class="bar3" id="3"></div>
+                </div>
+                <h1>WELCOME</h1>
+                <nav class="navbar">
+                    <ul>
+                        <li class="index"><a href="{{ url_for('index')}}">Home</a></li>
+                        <li class="calc2"><a href="{{ url_for('calc2')}}">Second Calculator</a></li>
+                        <li class="calc3"><a href="{{ url_for('calc3')}}">Third Calculator</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article>
+        </article>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='build.js')}}"></script>
+    {% endblock %}
+</body>
+</html>
